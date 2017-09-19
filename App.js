@@ -1,17 +1,6 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    )
-  }
-}
+import { StyleSheet, Text, View, Button } from 'react-native'
+import { DrawerNavigator, DrawerItems } from 'react-navigation'
 
 const styles = StyleSheet.create({
   container: {
@@ -20,4 +9,57 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    textAlign: 'center',
+    padding: 20,
+    marginTop: 20,
+    fontSize: 20,
+    color: '#fff',
+    backgroundColor: '#434343',
+  },
 })
+
+const BookView = ({ navigation }) => (
+  <View>
+    <Text style={styles.header}>Books</Text>
+    <Button
+      onPress={() => navigation.navigate('DrawerOpen')}
+      title="Open Drawer"
+    />
+  </View>
+)
+
+const AuthorView = ({ navigation }) => (
+  <View>
+    <Text style={styles.header}>Authors</Text>
+    <Button
+      onPress={() => navigation.navigate('DrawerOpen')}
+      title="Open Drawer"
+    />
+  </View>
+)
+
+const DrawerComponent = props => (
+  <View>
+    <DrawerItems {...props} />
+  </View>
+)
+
+const App = DrawerNavigator(
+  {
+    Books: {
+      screen: BookView,
+    },
+    Authors: {
+      screen: AuthorView,
+    },
+  },
+  {
+    initialRouteName: 'Books',
+    drawerWidth: 200,
+    drawerPosition: 'left',
+    contentComponent: DrawerComponent,
+  }
+)
+
+export default App
