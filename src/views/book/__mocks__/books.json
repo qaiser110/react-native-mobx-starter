@@ -1,0 +1,86 @@
+[
+  {
+    "id"      : "978-0641723445",
+    "name"    : "The Lightning Thief",
+    "author"  : "Rick Riordan",
+    "genre_s" : "Fiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "The Immortal Life of Henrietta Lacks ",
+    "author"  : "Rebecca Skloot",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-0641723445",
+    "name"    : "The Great Gatsby",
+    "author"  : "F. Scott Fitzgerald",
+    "genre_s" : "Fiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "Outliers: The Story of Success",
+    "author"  : "Malcolm Gladwell",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-0641723445",
+    "name"    : "This Side of Paradise ",
+    "author"  : "F. Scott Fitzgerald",
+    "genre_s" : "Fiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-0641723445",
+    "name"    : "Tender Is the Night",
+    "author"  : "F. Scott Fitzgerald",
+    "genre_s" : "Fiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-0641723445",
+    "name"    : "The Curious Case of Benjamin Button",
+    "author"  : "F. Scott Fitzgerald",
+    "genre_s" : "Fiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-0641723445",
+    "name"    : "The Love of the Last Tycoon",
+    "author"  : "F. Scott Fitzgerald",
+    "genre_s" : "Fiction",
+    "inStock" : true,
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "The Best American Science Writing 2011 ",
+    "author"  : "Rebecca Skloot",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "The Best American Science and Nature Writing ",
+    "author"  : "Rebecca Skloot",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "The Art of Failure",
+    "author"  : "Malcolm Gladwell",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  },
+  {
+    "id"      : "978-1423103349",
+    "name"    : "What the Dog Saw and Other Adventures",
+    "author"  : "Malcolm Gladwell",
+    "genre_s" : "Nonfiction",
+    "inStock" : true
+  }
+]

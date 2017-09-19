@@ -2,10 +2,10 @@ import React from 'react'
 import { View, Button } from 'react-native'
 import Title from '../../components/Title'
 
-const FictionBooks = ({ navigation }) => (
+const AllBooks = ({ navigation }) => (
   <View>
-    <Title text="Fiction Books" />
+    <Title text="All Books" />
   </View>
 )
 
-export default FictionBooks
+export default AllBooks

@@ -1,13 +1,17 @@
 import React from 'react'
 import { Text, View, Button } from 'react-native'
 import { TabNavigator, StackNavigator } from 'react-navigation'
+import AllBooksScreen from './all-books'
 import FictionBooksScreen from './fiction-books'
 import NonFictionBooksScreen from './non-fiction-books'
 
 const BookListView = TabNavigator(
   {
-    FictionBooksTab: {
+    AllBooksTab: {
       screen: FictionBooksScreen,
+    },
+    FictionBooksTab: {
+      screen: AllBooksScreen,
     },
     NonFictionBooksTab: {
       screen: NonFictionBooksScreen,
