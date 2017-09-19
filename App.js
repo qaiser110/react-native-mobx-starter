@@ -2,8 +2,8 @@ import React from 'react'
 import { View } from 'react-native'
 import { DrawerNavigator, DrawerItems } from 'react-navigation'
 
-import BookView from './src/book'
-import AuthorView from './src/author'
+import BookView from './src/views/book'
+import AuthorView from './src/views/author'
 
 const DrawerComponent = props => (
   <View>

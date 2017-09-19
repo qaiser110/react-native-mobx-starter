@@ -12,14 +12,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const AuthorView = ({ navigation }) => (
-  <View>
-    <Text style={styles.header}>Authors</Text>
-    <Button
-      onPress={() => navigation.navigate('DrawerOpen')}
-      title="Open Drawer"
-    />
-  </View>
-)
-
-export default AuthorView
+export default ({ text }) => <Text style={styles.header}>{text}</Text>
