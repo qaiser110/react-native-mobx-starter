@@ -1,23 +1,31 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
+import { DrawerNavigator, DrawerItems } from 'react-navigation'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    )
-  }
-}
+import BookView from './src/views/book'
+import AuthorView from './src/views/author'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const DrawerComponent = props => (
+  <View>
+    <DrawerItems {...props} />
+  </View>
+)
+
+const App = DrawerNavigator(
+  {
+    Books: {
+      screen: BookView,
+    },
+    Authors: {
+      screen: AuthorView,
+    },
   },
-})
+  {
+    initialRouteName: 'Books',
+    drawerWidth: 200,
+    drawerPosition: 'left',
+    contentComponent: DrawerComponent,
+  }
+)
+
+export default App
