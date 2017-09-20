@@ -1,12 +1,17 @@
 import React from 'react'
-import { TabNavigator } from 'react-navigation'
+import { Text, View, Button } from 'react-native'
+import { TabNavigator, StackNavigator } from 'react-navigation'
+import AllBooksScreen from './all-books'
 import FictionBooksScreen from './fiction-books'
 import NonFictionBooksScreen from './non-fiction-books'
 
-const BookView = TabNavigator(
+const BookListView = TabNavigator(
   {
-    FictionBooksTab: {
+    AllBooksTab: {
       screen: FictionBooksScreen,
+    },
+    FictionBooksTab: {
+      screen: AllBooksScreen,
     },
     NonFictionBooksTab: {
       screen: NonFictionBooksScreen,
@@ -20,5 +25,20 @@ const BookView = TabNavigator(
     },
   }
 )
+
+const BookView = StackNavigator({
+  HomeDrawer: {
+    screen: BookListView,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Book List',
+      headerLeft: (
+        <Button
+          onPress={() => navigation.navigate('DrawerOpen')}
+          title="Menu"
+        />
+      ),
+    }),
+  },
+})
 
 export default BookView

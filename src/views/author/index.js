@@ -1,8 +1,9 @@
 import React from 'react'
 import { Text, View, Button } from 'react-native'
+import { StackNavigator } from 'react-navigation'
 import Title from '../../components/Title'
 
-const AuthorView = ({ navigation }) => (
+const AuthorListView = ({ navigation }) => (
   <View>
     <Title text="Authors"/>
     <Button
@@ -11,5 +12,21 @@ const AuthorView = ({ navigation }) => (
     />
   </View>
 )
+
+const AuthorView = StackNavigator({
+  HomeDrawer: {
+    screen: AuthorListView,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Authors List',
+      headerLeft: (
+        <Button
+          onPress={() => navigation.navigate('DrawerOpen')}
+          title="Menu"
+        />
+      ),
+    }),
+  },
+})
+
 
 export default AuthorView
