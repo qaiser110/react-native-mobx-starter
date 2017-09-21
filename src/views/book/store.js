@@ -1,4 +1,5 @@
 import { types, process, getEnv } from 'mobx-state-tree'
+import api from './__mocks__/api'
 
 export const Book = types.model('Book', {
   id: types.identifier(),
@@ -15,7 +16,7 @@ export const BookStore = types
   })
   .views(self => ({
     get api() {
-      return getEnv(self).api
+      return getEnv(self) && getEnv(self).api ? getEnv(self).api : api
     },
     booksByGenre(genre) {
       return self.books.values().filter(t => t.genre === genre)

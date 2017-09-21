@@ -1,14 +1,6 @@
-import * as fs from 'fs'
 import { when } from 'mobx'
 import { BookStore } from '../store'
-
-const api = {
-  fetchBooks() {
-    return Promise.resolve(
-      JSON.parse(fs.readFileSync(`${__dirname}/../__mocks__/books.json`))
-    )
-  },
-}
+import api from '../__mocks__/api'
 
 it('bookstore fetches data', done => {
   const store = BookStore.create({ books: {} }, { api })
