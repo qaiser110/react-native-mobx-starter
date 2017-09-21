@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`author getSnapshot(store) data is correct 1`] = `
+Object {
+  "authors": Object {
+    "371": Object {
+      "gender": "Female",
+      "id": 371,
+      "name": "Rebecca Skloot",
+    },
+    "372": Object {
+      "gender": "Male",
+      "id": 372,
+      "name": "F. Scott Fitzgerald",
+    },
+    "373": Object {
+      "gender": "Male",
+      "id": 373,
+      "name": "Rick Riordan",
+    },
+    "374": Object {
+      "gender": "Male",
+      "id": 374,
+      "name": "Malcolm Gladwell",
+    },
+  },
+  "isLoading": false,
+}
+`;
+
+exports[`store.authors.values() data is correct 1`] = `
+Array [
+  Object {
+    "gender": "Female",
+    "id": 371,
+    "name": "Rebecca Skloot",
+  },
+  Object {
+    "gender": "Male",
+    "id": 372,
+    "name": "F. Scott Fitzgerald",
+  },
+  Object {
+    "gender": "Male",
+    "id": 373,
+    "name": "Rick Riordan",
+  },
+  Object {
+    "gender": "Male",
+    "id": 374,
+    "name": "Malcolm Gladwell",
+  },
+]
+`;

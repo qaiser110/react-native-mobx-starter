@@ -1,86 +1,86 @@
 [
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723001",
     "name"    : "The Lightning Thief",
     "author"  : "Rick Riordan",
-    "genre_s" : "Fiction",
+    "genre"   : "Fiction",
     "inStock" : true
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103300",
     "name"    : "The Immortal Life of Henrietta Lacks ",
     "author"  : "Rebecca Skloot",
-    "genre_s" : "Nonfiction",
-    "inStock" : true
+    "genre"   : "Nonfiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723002",
     "name"    : "The Great Gatsby",
     "author"  : "F. Scott Fitzgerald",
-    "genre_s" : "Fiction",
-    "inStock" : true
+    "genre"   : "Fiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103330",
     "name"    : "Outliers: The Story of Success",
     "author"  : "Malcolm Gladwell",
-    "genre_s" : "Nonfiction",
-    "inStock" : true
+    "genre"   : "Nonfiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723003",
     "name"    : "This Side of Paradise ",
     "author"  : "F. Scott Fitzgerald",
-    "genre_s" : "Fiction",
-    "inStock" : true
+    "genre"   : "Fiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723004",
     "name"    : "Tender Is the Night",
     "author"  : "F. Scott Fitzgerald",
-    "genre_s" : "Fiction",
+    "genre"   : "Fiction",
     "inStock" : true
   },
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723005",
     "name"    : "The Curious Case of Benjamin Button",
     "author"  : "F. Scott Fitzgerald",
-    "genre_s" : "Fiction",
-    "inStock" : true
+    "genre"   : "Fiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-0641723445",
+    "id"      : "978-0641723006",
     "name"    : "The Love of the Last Tycoon",
     "author"  : "F. Scott Fitzgerald",
-    "genre_s" : "Fiction",
-    "inStock" : true,
+    "genre"   : "Fiction",
+    "inStock" : true
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103301",
     "name"    : "The Best American Science Writing 2011 ",
     "author"  : "Rebecca Skloot",
-    "genre_s" : "Nonfiction",
-    "inStock" : true
+    "genre"   : "Nonfiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103302",
     "name"    : "The Best American Science and Nature Writing ",
     "author"  : "Rebecca Skloot",
-    "genre_s" : "Nonfiction",
-    "inStock" : true
+    "genre"   : "Nonfiction",
+    "inStock" : false
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103303",
     "name"    : "The Art of Failure",
     "author"  : "Malcolm Gladwell",
-    "genre_s" : "Nonfiction",
+    "genre"   : "Nonfiction",
     "inStock" : true
   },
   {
-    "id"      : "978-1423103349",
+    "id"      : "978-1423103304",
     "name"    : "What the Dog Saw and Other Adventures",
     "author"  : "Malcolm Gladwell",
-    "genre_s" : "Nonfiction",
+    "genre"   : "Nonfiction",
     "inStock" : true
   }
 ]

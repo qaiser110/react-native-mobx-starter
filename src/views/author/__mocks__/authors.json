@@ -1,0 +1,22 @@
+[
+  {
+    "id"      : 371,
+    "name"    : "Rebecca Skloot",
+    "gender"  : "Female"
+  },
+  {
+    "id"      : 372,
+    "name"    : "F. Scott Fitzgerald",
+    "gender"  : "Male"
+  },
+  {
+    "id"      : 373,
+    "name"    : "Rick Riordan",
+    "gender"  : "Male"
+  },
+  {
+    "id"      : 374,
+    "name"    : "Malcolm Gladwell",
+    "gender"  : "Male"
+  }
+]
