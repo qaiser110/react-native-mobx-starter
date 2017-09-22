@@ -1,6 +1,12 @@
 import { types, process, getEnv } from 'mobx-state-tree'
 import api from './__mocks__/api'
 
+const filterBy = {
+  All: () => true,
+  Fiction: book => book.genre === 'Fiction',
+  Nonfiction: book => book.genre === 'Nonfiction',
+}
+
 export const Book = types.model('Book', {
   id: types.identifier(),
   name: types.string,
@@ -13,13 +19,22 @@ export const BookStore = types
   .model('BookStore', {
     isLoading: true,
     books: types.map(Book),
+    filter: types.optional(
+      types.enumeration('FilterEnum', ['All', 'Fiction', 'Nonfiction']),
+      'All'
+    ),
   })
   .views(self => ({
     get api() {
       return getEnv(self) && getEnv(self).api ? getEnv(self).api : api
     },
     booksByGenre(genre) {
-      return self.books.values().filter(t => t.genre === genre)
+      return genre === 'All'
+        ? self.books.values()
+        : self.books.values().filter(t => t.genre === genre)
+    },
+    get filteredBooks() {
+      return self.books.values().filter(filterBy[self.filter])
     },
     get sortedAvailableBooks() {
       return sortBooks(self.books.values())
@@ -46,8 +61,13 @@ export const BookStore = types
       }
     })
 
+    function setFilter(filter) {
+      self.filter = filter
+    }
+
     return {
       loadBooks,
+      setFilter,
     }
   })
 

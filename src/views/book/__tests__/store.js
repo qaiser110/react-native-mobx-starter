@@ -64,3 +64,27 @@ it('bookstore gets books by genre', done => {
     }
   )
 })
+
+it('bookstore setFilter updates filteredBooks', done => {
+  const store = BookStore.create({ books: {} }, { api })
+  store.loadBooks()
+  when(
+    () => store.isLoading === false,
+    () => {
+      store.setFilter('All')
+      expect(store.filteredBooks.length).toBe(12)
+
+      store.setFilter('Fiction')
+      expect(store.filteredBooks.length).toBe(6)
+      expect(store.filteredBooks.map(book => book.name)).toEqual([
+        'The Lightning Thief',
+        'The Great Gatsby',
+        'This Side of Paradise ',
+        'Tender Is the Night',
+        'The Curious Case of Benjamin Button',
+        'The Love of the Last Tycoon',
+      ])
+      done()
+    }
+  )
+})
