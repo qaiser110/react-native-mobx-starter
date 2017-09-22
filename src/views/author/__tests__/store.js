@@ -1,15 +1,7 @@
-import * as fs from 'fs'
 import { when } from 'mobx'
 import { getSnapshot } from 'mobx-state-tree'
 import { AuthorStore } from '../store'
-
-const api = {
-  fetchAuthors() {
-    return Promise.resolve(
-      JSON.parse(fs.readFileSync(`${__dirname}/../__mocks__/authors.json`))
-    )
-  },
-}
+import api from '../__mocks__/api'
 
 it('store.authors.values() data is correct', done => {
   const store = AuthorStore.create({ authors: {} }, { api })

@@ -1,14 +1,6 @@
-import * as fs from 'fs'
 import { when } from 'mobx'
 import { BookStore } from '../store'
-
-const api = {
-  fetchBooks() {
-    return Promise.resolve(
-      JSON.parse(fs.readFileSync(`${__dirname}/../__mocks__/books.json`))
-    )
-  },
-}
+import api from '../__mocks__/api'
 
 it('bookstore fetches data', done => {
   const store = BookStore.create({ books: {} }, { api })
@@ -67,6 +59,30 @@ it('bookstore gets books by genre', done => {
         'The Best American Science and Nature Writing ',
         'The Art of Failure',
         'What the Dog Saw and Other Adventures',
+      ])
+      done()
+    }
+  )
+})
+
+it('bookstore setFilter updates filteredBooks', done => {
+  const store = BookStore.create({ books: {} }, { api })
+  store.loadBooks()
+  when(
+    () => store.isLoading === false,
+    () => {
+      store.setFilter('All')
+      expect(store.filteredBooks.length).toBe(12)
+
+      store.setFilter('Fiction')
+      expect(store.filteredBooks.length).toBe(6)
+      expect(store.filteredBooks.map(book => book.name)).toEqual([
+        'The Lightning Thief',
+        'The Great Gatsby',
+        'This Side of Paradise ',
+        'Tender Is the Night',
+        'The Curious Case of Benjamin Button',
+        'The Love of the Last Tycoon',
       ])
       done()
     }

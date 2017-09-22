@@ -1,4 +1,5 @@
 import { types, process, getEnv } from 'mobx-state-tree'
+import api from './__mocks__/api'
 
 export const Author = types.model('Author', {
   id: types.identifier(types.number),
@@ -13,7 +14,7 @@ export const AuthorStore = types
   })
   .views(self => ({
     get api() {
-      return getEnv(self).api
+      return getEnv(self) && getEnv(self).api ? getEnv(self).api : api
     },
   }))
   .actions(self => {
