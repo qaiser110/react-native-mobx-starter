@@ -1,17 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
 import { observer } from 'mobx-react'
 import { BookStore } from '../store'
-
-const Book = observer(({ book }) => <Text>{book.name}</Text>)
-
-const BookList = observer(({ books }) => (
-  <View>{books.map(book => <Book key={book.id} book={book} />)}</View>
-))
+import BookList from './BookList'
 
 @observer
 class BookListView extends Component {
-  store
   async componentWillMount() {
     this.store = BookStore.create({ books: {} }, { api: null })
     await this.store.loadBooks()
@@ -24,4 +17,4 @@ class BookListView extends Component {
   }
 }
 
-export default observer(BookListView)
+export default BookListView
