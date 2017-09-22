@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import { Text, View, Button } from 'react-native'
+import { View, Button } from 'react-native'
 import { StackNavigator } from 'react-navigation'
+import { List, ListItem } from 'react-native-elements'
 import { observer } from 'mobx-react'
-import Title from '../../components/Title'
 import { AuthorStore } from './store'
-
-const Author = observer(({ author }) => <Text>{author.name}</Text>)
 
 @observer
 class AuthorList extends Component {
@@ -18,9 +16,13 @@ class AuthorList extends Component {
   render() {
     return (
       <View>
-        {this.store.authors
-          .values()
-          .map(author => <Author key={author.id} author={author} />)}
+        {
+          <List>
+            {this.store.authors
+              .values()
+              .map(author => <ListItem key={author.id} title={author.name} />)}
+          </List>
+        }
       </View>
     )
   }
@@ -28,11 +30,6 @@ class AuthorList extends Component {
 
 const AuthorListView = ({ navigation }) => (
   <View>
-    <Title text="Authors" />
-    <Button
-      onPress={() => navigation.navigate('DrawerOpen')}
-      title="Open Drawer"
-    />
     <AuthorList />
   </View>
 )

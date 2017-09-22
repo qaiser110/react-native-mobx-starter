@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import AllView from '../all-books'
+import AllView from '../tabs/all-books'
 import Title from '../../../components/Title'
 
 it('renders correctly', () => {
