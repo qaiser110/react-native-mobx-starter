@@ -1,22 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  disabled={false}
-  ellipsizeMode="tail"
-  style={
-    Object {
-      "backgroundColor": "#434343",
-      "color": "#fff",
-      "fontSize": 20,
-      "marginTop": 20,
-      "padding": 20,
-      "textAlign": "center",
-    }
-  }
->
-  Sample Text
-</Text>
+<Styled(Header)>
+  <Styled(Body)>
+    <Styled(Title)>
+      Sample Text
+    </Styled(Title)>
+  </Styled(Body)>
+  <Styled(Right) />
+</Styled(Header)>
 `;

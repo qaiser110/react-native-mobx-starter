@@ -1,13 +1,14 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Container } from 'native-base'
 import Title from '../../../components/Title'
 import BookListView from '../components/BookListView'
+import styles from "./styles";
 
 const FictionBooks = ({ navigation }) => (
-  <View>
+  <Container style={styles.container}>
     <Title text="Fiction Books" />
     <BookListView filter="Fiction" />
-  </View>
+  </Container>
 )
 
 export default FictionBooks

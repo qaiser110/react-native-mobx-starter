@@ -1,12 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View>
+<Styled(Container)
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+    }
+  }
+>
   <Component
     text="All Books"
   />
   <BookListView
     filter="All"
   />
-</View>
+</Styled(Container)>
 `;
