@@ -1,8 +1,16 @@
 import React from 'react'
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
+import { List, ListItem } from 'react-native-elements'
 import { observer } from 'mobx-react'
-import Book from './Book'
 
 export default observer(({ books }) => (
-  <View>{books.map(book => <Book key={book.id} book={book} />)}</View>
+  <ScrollView>
+    {
+      <List>
+        {books.map(book => (
+          <ListItem key={book.id} title={book.name} subtitle={book.author} />
+        ))}
+      </List>
+    }
+  </ScrollView>
 ))

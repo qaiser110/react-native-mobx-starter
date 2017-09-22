@@ -11,7 +11,6 @@ it('renders correctly', () => {
     backgroundColor: '#434343',
     color: '#fff',
     fontSize: 20,
-    marginTop: 20,
     padding: 20,
     textAlign: 'center',
   })
